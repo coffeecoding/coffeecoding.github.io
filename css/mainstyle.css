@@ -1,0 +1,93 @@
+html {
+    font-size: 10;
+    font-family: 'Segoe UI';
+    color: #cccccc;
+    background-color: #222222;
+}
+
+header {
+    text-align: left;
+    background-color: #2b2b2b;
+}
+
+body {
+    width: 70%;
+    min-width: 800px;
+    margin: 0 auto;
+}
+
+p {
+    margin: 0px;
+}
+
+main {
+    padding: 20px;
+    background-color: #2a2a2a;
+}
+
+footer {
+    text-align: center;
+    margin-top: 16px;
+    padding: 10px;
+    color: #aaaaaa;
+    background-color: #1b1b1b;
+}
+
+h1 {
+    padding-left: 16px;
+}
+
+li a{
+    padding: 16px;
+}
+
+li a:hover{ 
+    color: darkgray;
+    background-color: #191919;
+}
+
+/* This section causes a horizontal header arrangement btw the profile image, header h1 and navbar */
+#header-horizontal-ul {
+    margin-top: 8px;
+    margin-bottom: 16px;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+#profile-img {
+    height: auto;
+    width: auto;
+}
+
+#header-vertical-ul {
+    padding: 0;
+}
+
+nav {
+    flex: 100%;
+    display: flex;
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    flex: 2;
+    display: flex;
+}
+
+nav li {
+    display: inline;
+    text-align: center;
+    flex: 1;
+}
+
+nav a, nav span {
+    display: inline-block;
+    font-size: 1.5rem;
+    height: 3rem;
+    line-height: 1.7;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #cccccc;
+}
