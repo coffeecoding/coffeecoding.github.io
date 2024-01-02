@@ -1,0 +1,130 @@
+    
+    <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="YSCodes is a Software Engineer with full stack experience.">
+    <meta http-equiv="refresh" content="2999">
+    <link rel="icon" type="image/ico" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="stylesheet" href="css/main.css">
+    <title>YSCodes - Software Engineering Professional - Projects</title></head>
+<body>
+<script type="text/javascript" src="js/generic.js"></script>
+
+<div id="ysHeaderContainer">
+    <nav id="ys-header">
+        <div class="logo" href="index.php">
+            <div style="display: flex; flex-direction: row; gap: 8px; align-items: center; justify-content: center; position: relative;">
+            <img src="img/coffee.png" width="32px" style="transform: translateY(-4px)"/>
+            <strong>Coding</strong>
+            </div>
+        </div>
+        <div class="menu">
+            <div id="ys-topnav" class="topnav">
+                <a href="about.php.html" class="ys-nav-item localized  ">About</a>
+                <a href="projects.php.html" class="ys-nav-item localized active">Projects</a>
+            </div>
+            <div id="hamburger-menu">
+                <div id="hamburger-menu-btn" onclick="toggleMenu()">
+                    <div class="patty"></div>
+                    <div class="patty"></div>
+                    <div class="patty"></div>
+                </div>
+                <div id="menu-dropdown">
+                    <a href="about.php.html" class="ys-dropdown-item dropdown-item-last localized  ">About</a>
+                    <a href="projects.php.html" class="ys-dropdown-item dropdown-item-first localized active">Projects</a>
+                </div>
+            </div>
+        </div>
+        <div id="header-tail">
+            <div style="display:flex; flex-direction: row; gap: 8px; align-items: center; justify-content: center">
+                <a href="https://github.com/coffeecoding" target="_blank">
+                    <button class="ys-btn-secondary-bl" style="display:flex; flex-direction: column; align-items: center; justify-content: center; width:100%"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github-filled" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00b341" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5.315 2.1c.791 -.113 1.9 .145 3.333 .966l.272 .161l.16 .1l.397 -.083a13.3 13.3 0 0 1 4.59 -.08l.456 .08l.396 .083l.161 -.1c1.385 -.84 2.487 -1.17 3.322 -1.148l.164 .008l.147 .017l.076 .014l.05 .011l.144 .047a1 1 0 0 1 .53 .514a5.2 5.2 0 0 1 .397 2.91l-.047 .267l-.046 .196l.123 .163c.574 .795 .93 1.728 1.03 2.707l.023 .295l.007 .272c0 3.855 -1.659 5.883 -4.644 6.68l-.245 .061l-.132 .029l.014 .161l.008 .157l.004 .365l-.002 .213l-.003 3.834a1 1 0 0 1 -.883 .993l-.117 .007h-6a1 1 0 0 1 -.993 -.883l-.007 -.117v-.734c-1.818 .26 -3.03 -.424 -4.11 -1.878l-.535 -.766c-.28 -.396 -.455 -.579 -.589 -.644l-.048 -.019a1 1 0 0 1 .564 -1.918c.642 .188 1.074 .568 1.57 1.239l.538 .769c.76 1.079 1.36 1.459 2.609 1.191l.001 -.678l-.018 -.168a5.03 5.03 0 0 1 -.021 -.824l.017 -.185l.019 -.12l-.108 -.024c-2.976 -.71 -4.703 -2.573 -4.875 -6.139l-.01 -.31l-.004 -.292a5.6 5.6 0 0 1 .908 -3.051l.152 -.222l.122 -.163l-.045 -.196a5.2 5.2 0 0 1 .145 -2.642l.1 -.282l.106 -.253a1 1 0 0 1 .529 -.514l.144 -.047l.154 -.03z" stroke-width="0" fill="currentColor" />
+</svg></button>
+                </a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="page-content-wrapper bg-gray">
+<div class="container first pb-128 bg-gray">
+    <div class="content content-center">
+        <div class="mobile-center mb-32" id="hero" style="display: flex; flex-direction: column">
+            <h2 class="mb-32">Personal Projects</h2>
+            <p>Here are some of the projects I've enjoyed working on over the years.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 32px">
+        
+    <a href="https://www.hnch.at" target="_blank" style="color:black">
+    <div class="card">
+        <div style="width: 64px; height: 64px; background-image: url(img/hnch.svg); background-size: cover; background-position: 50% 50%">
+        </div>
+        <div style="flex: 1; display:flex; flex-direction:column; align-items: flex-start; justify-content: flex-start">
+            <div style="margin-bottom: 8px"><strong>hnch.at</strong></div>
+            <div style="text-align: left">Hackernews-oriented communication service - Connect instantly with fellow hackernews enthusiasts and exchange great ideas, knowledge, and support!</div>
+            <div class="pill-wrapper">
+                <div class="pill" style="background-color: black">NextJS</div><div class="pill" style="background-color: #1082A7">React</div><div class="pill" style="background-color: rgb(88, 101, 242)">SocketIO</div><div class="pill" style="background-color: #DFA02D">JavaScript</div>
+            </div>
+        </div>
+    </div>
+    </a>
+    
+    <a href="https://www.gifcii.fun" target="_blank" style="color:black">
+    <div class="card">
+        <div style="width: 64px; height: 64px; background-image: url(img/gifcii2.png); background-size: cover; background-position: 50% 50%">
+        </div>
+        <div style="flex: 1; display:flex; flex-direction:column; align-items: flex-start; justify-content: flex-start">
+            <div style="margin-bottom: 8px"><strong>Gifcii</strong></div>
+            <div style="text-align: left">Dynamically generate animated ASCII art for any GIF! Watch in awe as you vary the size and resolution and the ASCII GIF updates in real time.</div>
+            <div class="pill-wrapper">
+                <div class="pill" style="background-color: black">NextJS</div><div class="pill" style="background-color: #1082A7">React</div>
+            </div>
+        </div>
+    </div>
+    </a>
+    
+    <a href="https://www.discryptor.io" target="_blank" style="color:black">
+    <div class="card">
+        <div style="width: 64px; height: 64px; background-image: url(img/discryptor.png); background-size: cover; background-position: 50% 50%">
+        </div>
+        <div style="flex: 1; display:flex; flex-direction:column; align-items: flex-start; justify-content: flex-start">
+            <div style="margin-bottom: 8px"><strong>Discryptor</strong></div>
+            <div style="text-align: left">End-to-End Encryption for Discord private chat. Proof of Concept, whereby the communication is built atop the existing Discord infrastructure with no extra storage space needed.</div>
+            <div class="pill-wrapper">
+                <div class="pill" style="background-color: #9D4F96">C#</div><div class="pill" style="background-color: #72489F">ASP.NET</div><div class="pill" style="background-color: #0E7AB2">WPF</div><div class="pill" style="background-color: #0C5E9F">Flutter</div>
+            </div>
+        </div>
+    </div>
+    </a>
+    
+    <a href="https://www.github.com/coffeecoding/EasyNotes" target="_blank" style="color:black">
+    <div class="card">
+        <div style="width: 64px; height: 64px; background-image: url(img/en.ico); background-size: cover; background-position: 50% 50%">
+        </div>
+        <div style="flex: 1; display:flex; flex-direction:column; align-items: flex-start; justify-content: flex-start">
+            <div style="margin-bottom: 8px"><strong>EasyNotes</strong></div>
+            <div style="text-align: left">Ultimate note-taking app with infinitely nestable topics. Privacy is ensured via End-to-End Encryption! Cross-platform with a Windows (WPF) and Android (Flutter) client.</div>
+            <div class="pill-wrapper">
+                <div class="pill" style="background-color: #0C5E9F">Flutter</div><div class="pill" style="background-color: #9D4F96">C#</div><div class="pill" style="background-color: #4A7DA4">MySQL</div><div class="pill" style="background-color: #72489F">ASP.NET</div><div class="pill" style="background-color: #0E7AB2">WPF</div>
+            </div>
+        </div>
+    </div>
+    </a>
+            </div>
+    </div>
+</div>
+
+    </div>
+
+
+    <footer class="bg-gray">
+    <div class="footer-copy text-center font-weight-400 py-16" style="width:100%; font-size: 14px">
+        &copy; 2024 YSCodes | <a href="https://www.flaticon.com/free-icons/coffee" title="coffee icons">Coffee icons created by Freepik - Flaticon</a>
+    </div>
+</footer>
+<!--<script>localizeLinks();</script>--></div></body></html>
