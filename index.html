@@ -390,6 +390,8 @@
             initialHues.set(i, h);
         });
 
+        console.log(initialHues);
+
         lumSlider.addEventListener("input", (e) => updateLuminances(Number.parseInt(e.target.value)));
         lumLabel.innerHTML = lumSlider.value;
         updateLuminances(Number.parseInt(lumSlider.value));

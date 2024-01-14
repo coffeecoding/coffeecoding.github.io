@@ -8,4 +8,4 @@ The tool was deliberately made using the simplest possible tools out of an appre
 
 ## Status
 
-❌ Currently not working in Firefox
+❌ Currently may not be working properly in Firefox
