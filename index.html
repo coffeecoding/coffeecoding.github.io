@@ -1,77 +1,386 @@
-    
-    <!doctype html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="description" content="Hey, I'm Yousaf - a Software Engineer with full stack experience.">
-    <meta http-equiv="refresh" content="2999">
-    <link rel="icon" type="image/ico" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
-    <link rel="stylesheet" href="css/main.css">
-    <title>CoffeeCoding - Software Engineering Professional - Home</title></head>
+    <title>Beautiful Color Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            color: white;
+            background-color: #222;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 400;
+            margin-bottom: 0.25em;
+        }
+
+        label,
+        p {
+            font-size: 18;
+        }
+
+        .lead {
+            text-wrap: balance;
+            max-inline-size: 54ch;
+        }
+
+        .my-sm {
+            margin-top: 6px;
+            margin-bottom: 4px;
+        }
+
+        .yspace-sm {
+            height: 16px;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .flex-center {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flex-grow {
+            display: flex;
+            flex: 1;
+        }
+
+        .color-row {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            padding: 16px;
+        }
+
+        .col {
+            display: inline-block;
+            justify-content: center;
+        }
+
+        .box {
+            width: 64px;
+            height: 64px;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .bg-darkgray {
+            background-color: #333;
+        }
+
+        .bg-gray {
+            background-color: #444;
+        }
+
+        .content {
+            margin: auto 0;
+        }
+
+        .code-wrapper {
+            position: relative;
+            border-top: solid 1px #333;
+            border-left: solid 1px #333;
+            border-bottom: solid 1px #444;
+            border-right: solid 1px #444;
+            border-radius: 8px;
+            background-color: #181818;
+            line-height: 1.1em;
+            padding: 16px;
+            cursor: text;
+        }
+
+        button {
+            border: solid 1px #444;
+            background-color: #333;
+            padding: 4px 8px;
+            border-radius: 4px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+
+        button:hover {
+            border: solid 1px #228;
+            background-color: rgb(45, 45, 117);
+        }
+
+        .btn-sel {
+            border: solid 1px #339;
+            background-color: rgb(52, 52, 145);
+        }
+
+        .cpy-btn {
+            position: absolute;
+            right: -4;
+            top: 0;
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+
 <body>
-<script type="text/javascript" src="js/generic.js"></script>
-
-<div id="ysHeaderContainer">
-    <nav id="ys-header">
-        <div class="logo" href="index.php">
-            <div style="display: flex; flex-direction: row; gap: 8px; align-items: center; justify-content: center; position: relative;">
-            <img src="img/coffee.png" width="32px" style="transform: translateY(-4px)"/>
-            <strong>Coding</strong>
-            </div>
+    <div class="content col text-center">
+        <h1>Beautiful colors!</h1>
+        <div class="col">
+            <p class="text-center lead">
+                In some contexts, it is desirable to use a color palette of equally saturated and luminant colors. Here
+                is a simple tool that allows you to generate such a palette, starting from 7 base HTML colors.
+            </p>
         </div>
-        <div class="menu">
-            <div id="ys-topnav" class="topnav">
-                <a href="about.php.html" class="ys-nav-item localized  ">About</a>
-                <a href="projects.php.html" class="ys-nav-item localized ">Projects</a>
-            </div>
-            <div id="hamburger-menu">
-                <div id="hamburger-menu-btn" onclick="toggleMenu()">
-                    <div class="patty"></div>
-                    <div class="patty"></div>
-                    <div class="patty"></div>
-                </div>
-                <div id="menu-dropdown">
-                    <a href="about.php.html" class="ys-dropdown-item dropdown-item-last localized  ">About</a>
-                    <a href="projects.php.html" class="ys-dropdown-item dropdown-item-first localized ">Projects</a>
-                </div>
-            </div>
+        <div class="text-center">
+            <h3 class="my-sm">Base Colors</h3>
         </div>
-        <div id="header-tail">
-            <div style="display:flex; flex-direction: row; gap: 8px; align-items: center; justify-content: center">
-                <a href="https://github.com/coffeecoding" target="_blank">
-                    <button class="ys-btn-secondary-bl" style="display:flex; flex-direction: column; align-items: center; justify-content: center; width:100%"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github-filled" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00b341" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M5.315 2.1c.791 -.113 1.9 .145 3.333 .966l.272 .161l.16 .1l.397 -.083a13.3 13.3 0 0 1 4.59 -.08l.456 .08l.396 .083l.161 -.1c1.385 -.84 2.487 -1.17 3.322 -1.148l.164 .008l.147 .017l.076 .014l.05 .011l.144 .047a1 1 0 0 1 .53 .514a5.2 5.2 0 0 1 .397 2.91l-.047 .267l-.046 .196l.123 .163c.574 .795 .93 1.728 1.03 2.707l.023 .295l.007 .272c0 3.855 -1.659 5.883 -4.644 6.68l-.245 .061l-.132 .029l.014 .161l.008 .157l.004 .365l-.002 .213l-.003 3.834a1 1 0 0 1 -.883 .993l-.117 .007h-6a1 1 0 0 1 -.993 -.883l-.007 -.117v-.734c-1.818 .26 -3.03 -.424 -4.11 -1.878l-.535 -.766c-.28 -.396 -.455 -.579 -.589 -.644l-.048 -.019a1 1 0 0 1 .564 -1.918c.642 .188 1.074 .568 1.57 1.239l.538 .769c.76 1.079 1.36 1.459 2.609 1.191l.001 -.678l-.018 -.168a5.03 5.03 0 0 1 -.021 -.824l.017 -.185l.019 -.12l-.108 -.024c-2.976 -.71 -4.703 -2.573 -4.875 -6.139l-.01 -.31l-.004 -.292a5.6 5.6 0 0 1 .908 -3.051l.152 -.222l.122 -.163l-.045 -.196a5.2 5.2 0 0 1 .145 -2.642l.1 -.282l.106 -.253a1 1 0 0 1 .529 -.514l.144 -.047l.154 -.03z" stroke-width="0" fill="currentColor" />
-</svg></button>
-                </a>
-            </div>
+        <div class="color-row">
+            <div class="box fix" style="background-color: green;"></div>
+            <div class="box fix" style="background-color: cyan;"></div>
+            <div class="box fix" style="background-color: blue;"></div>
+            <div class="box fix" style="background-color: magenta;"></div>
+            <div class="box fix" style="background-color: red;"></div>
+            <div class="box fix" style="background-color: orange;"></div>
+            <div class="box fix" style="background-color: yellow;"></div>
         </div>
-    </nav>
-</div>
-
-<div class="page-content-wrapper bg-gray"><div class="container first pb-128">
-    <div class="content content-center">
-        <div class="mobile-center" id="hero" style="display: flex; flex-direction: column">
-            <h2 class="mb-32">Aloha! I'm Yousaf</h2>
-            <p>Fresh CS graduate with a Master's from Technical University Munich, Germany.</p>
-            <p>Full stack experience with proficiency in C#, ASP.NET, MySQL, WPF as well as NodeJS, NextJS, React, JavaScript.</p>
-            <p>Check out my <a href="projects.php.html">projects</a> for a more indepth idea of my skillset.</p>
-            <p></p>
-            <p>Looking for a versatile and passionate full stack software & web developer?</p>
-            <p>Contact me: yscodesdotcom@gmail.com</p>
+        <div class="text-center">
+            <h3 class="my-sm">Black Background</h3>
+        </div>
+        <div class="color-row text-center" style="background-color: black;">
+            <div class="box var" style="background-color: hsl(120, 100%, 25%);"></div>
+            <div class="box var" style="background-color: hsl(180, 100%, 50%);"></div>
+            <div class="box var" style="background-color: hsl(240, 100%, 50%);"></div>
+            <div class="box var" style="background-color: hsl(300, 100%, 50%);"></div>
+            <div class="box var" style="background-color: hsl(0, 100%, 50%);"></div>
+            <div class="box var" style="background-color: hsl(39, 100%, 50%);"></div>
+            <div class="box var" style="background-color: hsl(60, 100%, 50%);"></div>
+        </div>
+        <div class="text-center">
+            <h3 class="my-sm">White Background</h3>
+        </div>
+        <div class="color-row" style="background-color: white;">
+            <div class="box var" style="background-color: hsl(120, 100%, 25%);"></div>
+            <div class="box var" style="background-color: hsl(180, 100%, 50%);"></div>
+            <div class="box var" style="background-color: hsl(240, 100%, 50%);"></div>
+            <div class="box var" style="background-color: hsl(300, 100%, 50%);"></div>
+            <div class="box var" style="background-color: hsl(0, 100%, 50%);"></div>
+            <div class="box var" style="background-color: hsl(39, 100%, 50%);"></div>
+            <div class="box var" style="background-color: hsl(60, 100%, 50%);"></div>
+        </div>
+        <div class="yspace-sm"></div>
+        <div class="row w-full">
+            <div class="text-center">Luminance: <label id="lumLabel" for="lumSlider">0</label></div>
+            <input class="flex-grow" name="lumSlider" id="lumSlider" value="58" type="range" min="1" max="99" />
+        </div>
+        <div class="row">
+            <div class="text-center">Saturation: <label id="satLabel" for="satSlider">0</label></div>
+            <input class="flex-grow" name="satSlider" id="satSlider" value="58" type="range" min="1" max="99" />
+        </div>
+        <div class="row">
+            <div class="text-center">Hue Shift: <label id="hueLabel" for="hueSlider">0</label></div>
+            <input class="flex-grow" name="hueSlider" id="hueSlider" value="120" type="range" min="0" max="360" />
+        </div>
+        <div class="col">
+            <div class="text-center">
+                <h3 class="my-sm">Output</h3>
+            </div>
+            <div id="btnWrapper" class="row flex-center">
+                <button id="btnHex" onclick="onSetOutputFormat('hex')">hex</button>
+                <button id="btnRgb" onclick="onSetOutputFormat('rgb')">rgb</button>
+                <button id="btnHsl" onclick="onSetOutputFormat('hsl')">hsl</button>
+            </div>
+            <div class="code-wrapper">
+                <code id="outputCode"></code>
+                <button id="cpyBtn" class="cpy-btn">Copy To Clipboard</button>
+            </div>
         </div>
     </div>
-</div>
-    
-</div>
+</body>
+
+<script>
+    const prefs = {
+        outputFormat: 'rgb',
+    };
+
+    function rgbToHsl(r, g, b) {
+        r /= 255, g /= 255, b /= 255;
+        const max = Math.max(r, g, b), min = Math.min(r, g, b);
+        let h, s, l = (max + min) / 2;
+
+        if (max === min) {
+            h = s = 0; // achromatic
+        } else {
+            const d = max - min;
+            s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+            switch (max) {
+                case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+                case g: h = (b - r) / d + 2; break;
+                case b: h = (r - g) / d + 4; break;
+            }
+            h /= 6;
+        }
+
+        return [h * 360, s * 100, l * 100];
+    }
+
+    function setNewLuminance(element, newLuminance) {
+        const rgb = getComputedStyle(element).backgroundColor;
+        const [r, g, b] = rgb.match(/\d+/g).map(Number);
+
+        const [h, s] = rgbToHsl(r, g, b);
+        element.style.backgroundColor = `hsl(${h}, ${s}%, ${newLuminance}%)`;
+    }
+
+    function updateLuminances(newLum) {
+        lumLabel.innerHTML = newLum;
+        const boxes = document.querySelectorAll('.var');
+        boxes.forEach(b => {
+            setNewLuminance(b, newLum);
+        });
+        writeOutputColors();
+    }
+
+    function setNewSaturation(element, newSaturation) {
+        const rgb = getComputedStyle(element).backgroundColor;
+        const [r, g, b] = rgb.match(/\d+/g).map(Number);
+
+        const [h, s, l] = rgbToHsl(r, g, b);
+        element.style.backgroundColor = `hsl(${h}, ${newSaturation}%, ${l}%)`;
+    }
+
+    function updateSaturations(newValue) {
+        satLabel.innerHTML = newValue;
+        const boxes = document.querySelectorAll('.var');
+        boxes.forEach(b => {
+            setNewSaturation(b, newValue);
+        });
+        writeOutputColors();
+    }
+
+    function setNewHue(element, index, hueDelta) {
+        const rgb = getComputedStyle(element).backgroundColor;
+        const [r, g, b] = rgb.match(/\d+/g).map(Number);
+
+        const [h, s, l] = rgbToHsl(r, g, b);
+        const originalHue = initialHues.get(index);
+        const resultHue = (originalHue + hueDelta) % 360;
+        element.style.backgroundColor = `hsl(${resultHue}, ${s}%, ${l}%)`;
+    }
+
+    function updateHues(newValue) {
+        hueLabel.innerHTML = newValue;
+        const boxes = document.querySelectorAll('.var');
+        const numBaseColors = document.querySelectorAll('.fix').length;
+        boxes.forEach((b, i) => {
+            setNewHue(b, i % numBaseColors, newValue);
+        });
+        writeOutputColors();
+    }
 
 
-    <footer class="bg-gray">
-    <div class="footer-copy text-center font-weight-400 py-16" style="width:100%; font-size: 14px">
-        &copy; 2024 CoffeeCoding | <a href="https://www.flaticon.com/free-icons/coffee" title="coffee icons">Coffee icons created by Freepik - Flaticon</a>
-    </div>
-    <script data-goatcounter="https://ccio.goatcounter.com/count"
-        async src="http://gc.zgo.at/count.js"></script>
-</footer></body></html>
+    const hexToRgb = (hex) => {
+        let arrBuff = new ArrayBuffer(4);
+        let vw = new DataView(arrBuff);
+        vw.setUint32(0, parseInt(hex, 16), false);
+        let arrByte = new Uint8Array(arrBuff);
+        return [arrByte[1], arrByte[2], arrByte[3]];
+    };
+
+    const rgbToHex = (r, g, b) => {
+        return ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    }
+
+    function writeOutputColors() {
+        outputCode.innerHTML = "";
+        const numBaseColors = document.querySelectorAll('.fix').length;
+        const boxes = Array.from(document.querySelectorAll('.var')).slice(numBaseColors);
+        var outputArray = [];
+        boxes.forEach((box, index) => {
+            const rgb = getComputedStyle(box).backgroundColor;
+            const [r, g, b] = rgb.match(/\d+/g).map(Number);
+            if (prefs.outputFormat === 'rgb') {
+                outputArray.push(`${rgb}`);
+            } else if (prefs.outputFormat === 'hex') {
+                outputArray.push(`#${rgbToHex(r, g, b)}`);
+            } else if (prefs.outputFormat === 'hsl') {
+                const [h, s, l] = rgbToHsl(r, g, b).map(x => Math.round(x));
+                outputArray.push(`hsl(${h}, ${s}%, ${l}%)`);
+            }
+        });
+        outputCode.innerHTML = `["${outputArray.join('",<br>"')}"]`;
+    }
+
+    function renderOutputButtons() {
+        const fmt = prefs.outputFormat;
+        console.log(fmt);
+        const ctn = `
+        <button class="${fmt === 'hex' && 'btn-sel'}" id="btnHex" onclick="onSetOutputFormat('hex')">hex</button>
+        <button class="${fmt === 'rgb' && 'btn-sel'}" id="btnRgb" onclick="onSetOutputFormat('rgb')">rgb</button>
+        <button class="${fmt === 'hsl' && 'btn-sel'}" id="btnHsl" onclick="onSetOutputFormat('hsl')">hsl</button>
+        `;
+        btnWrapper.innerHTML = ctn;
+    }
+
+    function onSetOutputFormat(format) {
+        prefs.outputFormat = format;
+        console.log(prefs.outputFormat);
+        renderOutputButtons();
+        writeOutputColors();
+    }
+
+    const initialHues = new Map();
+    document.addEventListener('DOMContentLoaded', () => {
+        const boxes = document.querySelectorAll('.fix');
+        boxes.forEach((box, i) => {
+            const rgb = getComputedStyle(box).backgroundColor;
+            const [r, g, b] = rgb.match(/\d+/g).map(Number);
+            const [h, s, l] = rgbToHsl(r, g, b);
+            initialHues.set(i, h);
+        });
+
+        lumSlider.addEventListener("input", (e) => updateLuminances(Number.parseInt(e.target.value)));
+        lumLabel.innerHTML = lumSlider.value;
+        updateLuminances(Number.parseInt(lumSlider.value));
+
+        satSlider.addEventListener("input", (e) => updateSaturations(Number.parseInt(e.target.value)));
+        satLabel.innerHTML = satSlider.value;
+        updateSaturations(Number.parseInt(satSlider.value));
+
+        hueSlider.addEventListener("input", (e) => updateHues(Number.parseInt(e.target.value)));
+        hueLabel.innerHTML = hueSlider.value;
+        updateHues(Number.parseInt(hueSlider.value));
+
+        renderOutputButtons();
+        writeOutputColors();
+
+        cpyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(outputCode.innerText.replaceAll('\n', ' '));
+        });
+    });
+</script>
+
+</html>
