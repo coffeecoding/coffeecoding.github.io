@@ -35,11 +35,6 @@
             font-size: 18;
         }
 
-        .lead {
-            text-wrap: balance;
-            max-inline-size: 54ch;
-        }
-
         .my-sm {
             margin-top: 6px;
             margin-bottom: 4px;
@@ -71,6 +66,9 @@
             flex-direction: row;
             gap: 16px;
             padding: 16px;
+            justify-items: center;
+            align-items: center;
+            width: 100%;
         }
 
         .col {
@@ -81,6 +79,42 @@
         .box {
             width: 64px;
             height: 64px;
+        }
+
+        @media only screen and (max-width: 400px) {
+            .color-row {
+                gap: 6px;
+                padding: 6px;
+            }
+
+            .box {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .color-row {
+                gap: 8px;
+                padding: 8px;
+            }
+
+            .box {
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        @media only screen and (max-width: 800px) {
+            .color-row {
+                gap: 12px;
+                padding: 12px;
+            }
+
+            .box {
+                width: 48px;
+                height: 48px;
+            }
         }
 
         .w-full {
@@ -149,12 +183,6 @@
 <body>
     <div class="content col text-center">
         <h1>Beautiful colors!</h1>
-        <div class="col">
-            <p class="text-center lead">
-                In some contexts, it is desirable to use a color palette of equally saturated and luminant colors. Here
-                is a simple tool that allows you to generate such a palette, starting from 7 base HTML colors.
-            </p>
-        </div>
         <div class="text-center">
             <h3 class="my-sm">Base Colors</h3>
         </div>
