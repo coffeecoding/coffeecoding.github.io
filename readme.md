@@ -5,3 +5,7 @@ A simple VanillaJS tool to generate a coherent color palette exhibiting equal le
 ## Design
 
 The tool was deliberately made using the simplest possible tools out of an appreciation for simplicity.
+
+## Status
+
+❌ Currently not working in Firefox
